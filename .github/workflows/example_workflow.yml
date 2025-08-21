@@ -6,7 +6,7 @@ on:
    - main
 
 jobs:
- example-workflow:
+ example_workflow:
   runs-on: ubuntu-latest
 
   steps:

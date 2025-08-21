@@ -1,0 +1,20 @@
+name: Test python files
+
+on:
+ pull_request:
+  branch:
+   - main
+
+jobs:
+ run_tests:
+  runs-on: ubuntu-latest
+
+  steps:
+  - name: Checkout repo
+    uses: actions/Checkout@v3
+  - name: Install python to virtual machine
+    uses: action/setup-python
+  - name: Install requirments
+    run: pip install -r requirments.txt
+  - name: Run run_test
+    run: pytest
